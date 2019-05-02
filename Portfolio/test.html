@@ -1,4 +1,5 @@
 <body>
+    <h1 class="underline">Test</h1>
     <info-card v-for="info in designs" v-bind:key="info.title" v-bind:info="info" v-bind:image="info.image" @card-clicked="get_content($event, info)" />
     <info-card>
 </body>
