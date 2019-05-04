@@ -10,21 +10,21 @@ html
         p 語系物件除了字串，還支援衍生至 UnityEngine.Object 的任何類型，也就是說大部分 Unity 可辨認的 Asset 都可以被納入語系檔內。
         p 後來我更加重視資料的通用性，修復了已失效的 RapidSheetData 插件並與 Localiza 對接，讓內容製作員可以在 Google 試算表上製作語系檔案，再由 Unity 端導入專案內；
         p 此時 Localiza 的原始設計意義已經減去大半於是停止開發，若有下一個版本，我預計是一個更加高度與雲端資料緊密接合的插件。
-        h2 細節
-        p Localiza 是我第一個大幅操作 ScriptableObject 的插件，在製作與維護的過程中，了解了 Unity GUI 繪製與 Asset 序列化的流程並排除了常見的坑。
-        p 除了這兩個主要部分花掉我大量時間去摸熟以外，設計一個易於拓展、結構精簡的架構也是我在每一個作品中力圖達成的目標。
-        h4 介面繪製
-        p 在 Localiza 中，頂端的 Header 區、左邊的 Sidebar 區以及右下的主要內容顯示區利用了 delegate 隨著情況切換繪製內容。
-        p 在當時我還不認識 State Pattern，只是簡單的條件判定並切換 delegate 的繪製方法。
-        p 由於我在大學期間在 元智ITAC 有 App UI 設計經驗，套用在插件設計上，讓我很重視一些反饋以及體驗的設計。
-        p 例如，左側 Sidebar 是語系條目的分類資料夾清單，上方有搜尋功能列，當搜尋時，如果搜尋結果為空，該如何切換 Sidebar 繪製方式，讓使用者體驗能夠不被中斷，自然地掌握情況？
-        p 這類細節是我當時比較著力修飾的部分。
-        h4 Unity Editor 介面繪製與 Asset 序列化
-        p 當初還紀錄了我遇到的問題與解決過程，可見 #[a(href="https://medium.com/@No3371/%E5%9C%A8unity%E5%85%A7%E7%94%A8-delegate-%E7%95%AB%E8%87%AA%E8%A3%BD%E7%B7%A8%E8%BC%AF%E5%99%A8-1b7d319ca199") Medium]。
-        h4 拓展性
-        p 我認為 Localiza 最精華的部分在於它是支援 UnityEngine.Object 衍生類型的。
-        p 具體來說，對於 Object 的支援來自於 Unity 對於 Object 的 Rference 機制，儲存了指向實際物件的參考資料，就相當於儲存了「該使用哪個 Asset」。
-        p 編輯器畫面上顯示的這些不同類型的項目是由各自單獨的 Drawer Class 繪製，Drawer Class 負責了資料輸入的介面繪製，任何人都可以自己對自己想要語系化的 Asset 製作 Drawer，自訂其編輯介面。。
+        //- h2 細節
+        //- p Localiza 是我第一個大幅操作 ScriptableObject 的插件，在製作與維護的過程中，了解了 Unity GUI 繪製與 Asset 序列化的流程並排除了常見的坑。
+        //- p 除了這兩個主要部分花掉我大量時間去摸熟以外，設計一個易於拓展、結構精簡的架構也是我在每一個作品中力圖達成的目標。
+        //- h4 介面繪製
+        //- p 在 Localiza 中，頂端的 Header 區、左邊的 Sidebar 區以及右下的主要內容顯示區利用了 delegate 隨著情況切換繪製內容。
+        //- p 在當時我還不認識 State Pattern，只是簡單的條件判定並切換 delegate 的繪製方法。
+        //- p 由於我在大學期間在 元智ITAC 有 App UI 設計經驗，套用在插件設計上，讓我很重視一些反饋以及體驗的設計。
+        //- p 例如，左側 Sidebar 是語系條目的分類資料夾清單，上方有搜尋功能列，當搜尋時，如果搜尋結果為空，該如何切換 Sidebar 繪製方式，讓使用者體驗能夠不被中斷，自然地掌握情況？
+        //- p 這類細節是我當時比較著力修飾的部分。
+        //- h4 Unity Editor 介面繪製與 Asset 序列化
+        //- p 當初還紀錄了我遇到的問題與解決過程，可見 #[a(href="https://medium.com/@No3371/%E5%9C%A8unity%E5%85%A7%E7%94%A8-delegate-%E7%95%AB%E8%87%AA%E8%A3%BD%E7%B7%A8%E8%BC%AF%E5%99%A8-1b7d319ca199") Medium]。
+        //- h4 拓展性
+        //- p 我認為 Localiza 最精華的部分在於它是支援 UnityEngine.Object 衍生類型的。
+        //- p 具體來說，對於 Object 的支援來自於 Unity 對於 Object 的 Rference 機制，儲存了指向實際物件的參考資料，就相當於儲存了「該使用哪個 Asset」。
+        //- p 編輯器畫面上顯示的這些不同類型的項目是由各自單獨的 Drawer Class 繪製，Drawer Class 負責了資料輸入的介面繪製，任何人都可以自己對自己想要語系化的 Asset 製作 Drawer，自訂其編輯介面。。
         h2 截圖
         img.hfit.light-soft-boxshadow(src="https://raw.githubusercontent.com/No3371/No3371.github.io/master/Portfolio/Localiza/Resources/Editor2.png" style="display:block")
         br
