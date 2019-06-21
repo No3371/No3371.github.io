@@ -8,7 +8,7 @@ p 而染色實作的部分，我根據網路上的理論簡介實作了如 Photo
 p 此方法支援 8 個分區，也就是可以對一個材質的八個區塊分別調色。
 
 h3 
-    a(href="https://gitlab.com/No3371/unity_interactionframework") DEMO
+    a(href="https://no3371.github.io/Portfolio/Develop_ModelMultiDye/Demo/index.html") DEMO
 
 h3 實作
 p 簡單來說，準備一張與原材質相對應的分區貼圖，對不同分區在 R/G/B 色彩通道中填滿，將通道當作 bool flag，總共有 0 / R / G / B / RG / RB / GB / RB 八種組合，在 Shader 中對此貼圖採樣後計算分區編號，再取相對應分區的調色參數做通道混合。
