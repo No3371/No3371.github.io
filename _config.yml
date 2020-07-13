@@ -30,7 +30,7 @@ disqus: False
 disqus_shortname: No3371 # replace with your disqus username
 
 # Google Analytics
-google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+# google_analytics: UA-69281367-1 # replace with your GA tracking identifier
 
 # Permalinks
 permalink: /:title
@@ -69,7 +69,7 @@ safe: False
 lsi: False
 username: No3371
 repo: No3371.github.io
-branch: blog
+branch: source
 relative_source: ../blog/
 destination: ../blog/
 production_url:  https://No3371.github.io/blog/
