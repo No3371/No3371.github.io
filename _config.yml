@@ -71,7 +71,7 @@ username: No3371
 repo: blog
 branch: blog
 relative_source: ../blog/
-destination: ../blog-pages/
+destination: ../blog/
 production_url:  https://No3371.github.io/blog/
 source_url:  https://github.com/No3371/No3371.github.io/
 
